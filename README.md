@@ -15,6 +15,11 @@ A lightweight Rust binary that displays your CPU temperature on the Redragon CCW
 
 ## Installation as a Service
 
+### SteamOS - installed as a user service for the default deck user
+```bash
+curl -fSL https://raw.githubusercontent.com/RyuunosukeDS3/rust-redragon-ccw-3017/main/install-steamos-service.sh -o /tmp/install-service.sh \
+&& bash /tmp/install-service.sh
+```
 ### Linux
 ```bash
 curl -fSL https://raw.githubusercontent.com/RyuunosukeDS3/rust-redragon-ccw-3017/main/install-service.sh -o /tmp/install-service.sh \
