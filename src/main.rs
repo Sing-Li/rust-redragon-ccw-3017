@@ -39,7 +39,7 @@ fn get_cpu_temp() -> Option<u8> {
                 let name = name.trim();
                 if matches!(
                     name,
-                    "k10temp" | "coretemp" | "zenpower" | "nct6775" | "it87"
+                    "k10temp" | "coretemp" | "zenpower" | "nct6775" | "it87" | "amdgpu"
                 ) {
                     if let Some(temp) = read_temp(path) {
                         return Some(temp);
