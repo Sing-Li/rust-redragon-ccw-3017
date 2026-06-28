@@ -159,7 +159,7 @@ fn send_temp(dev: &hidapi::HidDevice, temp: u8) -> bool {
     packet[0] = 0xA0;
     packet[1] = 0x01;
     packet[2] = temp;
-    packet[3] = (temp + 0xA0 + 0x01) & 0xff;
+    packet[3] = temp + 0xA0 + 0x01;
 
     dev.write(&packet).is_ok()
 }
