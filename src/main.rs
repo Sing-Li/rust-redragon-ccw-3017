@@ -157,8 +157,13 @@ fn read_temp(path: &Path) -> Option<u8> {
 fn send_temp(dev: &hidapi::HidDevice, temp: u8) -> bool {
     let tens = temp / 10;
     let mut packet = [0u8; 64];
-    packet[0] = tens;
-    packet[1] = temp;
+   // packet[0] = tens;
+   // packet[1] = temp;
+   packet[1] = 0xA5;
+   packet[2] = 1;
+   packet[3] = 0;
+   packet[4] = temp;
+
     dev.write(&packet).is_ok()
 }
 
